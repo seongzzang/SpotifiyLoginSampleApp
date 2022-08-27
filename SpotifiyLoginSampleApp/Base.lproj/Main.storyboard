@@ -53,11 +53,63 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lyS-SW-e7s">
+                                <rect key="frame" x="30" y="535.5" width="354" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8Y-PN-gNg">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ayA-O9-4nc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="이메일/비밀번호로 계속하기">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWk-Kx-bB0">
+                                        <rect key="frame" x="0.0" y="75" width="354" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="uVG-bd-cOJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-31" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-119" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="구글로 계속하기" image="logo_google">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-XB-cjy">
+                                        <rect key="frame" x="0.0" y="150" width="354" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="usG-rK-INI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="titleEdgeInsets" minX="-31" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-119" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Apple로 계속하기" image="logo_apple">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qWk-Kx-bB0" firstAttribute="leading" secondItem="lyS-SW-e7s" secondAttribute="leading" id="4lp-OQ-UYE"/>
+                                    <constraint firstAttribute="trailing" secondItem="X7D-XB-cjy" secondAttribute="trailing" id="GbC-gM-03q"/>
+                                    <constraint firstAttribute="trailing" secondItem="J8Y-PN-gNg" secondAttribute="trailing" id="K4p-73-TMJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qWk-Kx-bB0" secondAttribute="trailing" id="Ngx-S2-s7P"/>
+                                    <constraint firstItem="X7D-XB-cjy" firstAttribute="leading" secondItem="lyS-SW-e7s" secondAttribute="leading" id="XXi-XA-fJH"/>
+                                    <constraint firstItem="J8Y-PN-gNg" firstAttribute="leading" secondItem="lyS-SW-e7s" secondAttribute="leading" id="y1q-Mf-dgM"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yTV-h7-n1v"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yTV-h7-n1v" firstAttribute="trailing" secondItem="lyS-SW-e7s" secondAttribute="trailing" constant="30" id="MmZ-3z-E3q"/>
+                            <constraint firstItem="lyS-SW-e7s" firstAttribute="top" secondItem="Cbp-iK-9pu" secondAttribute="bottom" constant="60" id="Uoi-sW-bam"/>
                             <constraint firstItem="Cbp-iK-9pu" firstAttribute="centerY" secondItem="yTV-h7-n1v" secondAttribute="centerY" multiplier="4/5" id="VuO-EC-isC"/>
+                            <constraint firstItem="lyS-SW-e7s" firstAttribute="leading" secondItem="yTV-h7-n1v" secondAttribute="leading" constant="30" id="YEN-f6-22q"/>
+                            <constraint firstItem="lyS-SW-e7s" firstAttribute="centerX" secondItem="yTV-h7-n1v" secondAttribute="centerX" id="c3J-EQ-4vG"/>
                             <constraint firstItem="Cbp-iK-9pu" firstAttribute="centerX" secondItem="yTV-h7-n1v" secondAttribute="centerX" id="fed-tF-wEM"/>
                         </constraints>
                     </view>
@@ -69,6 +121,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo_apple" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="logo_google" width="33.333332061767578" height="33.333332061767578"/>
         <image name="music.house.fill" catalog="system" width="128" height="106"/>
     </resources>
 </document>
