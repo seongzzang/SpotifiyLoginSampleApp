@@ -23,6 +23,8 @@ class EnterEmailViewController: UIViewController{
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        emailTextField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +32,7 @@ class EnterEmailViewController: UIViewController{
         
         //navigationBar 보이기
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
@@ -38,5 +41,15 @@ class EnterEmailViewController: UIViewController{
 }
 
 extension EnterEmailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let isEmailEmpty = emailTextField.text == ""
+        let isPasswordEmpty = passwordTextField.text == ""
+        
+        nextButton.isEnabled = !isEmailEmpty && !isPasswordEmpty
+    }
 }
