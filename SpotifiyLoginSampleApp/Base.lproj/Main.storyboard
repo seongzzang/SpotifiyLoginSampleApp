@@ -78,6 +78,9 @@
                                         <state key="normal" title="구글로 계속하기" image="logo_google">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="googleLoginButtonTapped:" destination="eM0-R1-12T" eventType="touchUpInside" id="SrT-hk-H1c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7D-XB-cjy">
                                         <rect key="frame" x="0.0" y="150" width="354" height="60"/>
@@ -90,6 +93,9 @@
                                         <state key="normal" title="Apple로 계속하기" image="logo_apple">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="appleLoginButtonTapped:" destination="eM0-R1-12T" eventType="touchUpInside" id="4gf-zd-OGj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -114,6 +120,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vTs-EX-lbI"/>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="X7D-XB-cjy" id="M3c-OV-zFy"/>
+                        <outlet property="emailLoginButton" destination="J8Y-PN-gNg" id="2OZ-au-b2Q"/>
+                        <outlet property="googleLoginButton" destination="qWk-Kx-bB0" id="gOn-pH-TuI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LL6-ih-rWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
