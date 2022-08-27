@@ -13,6 +13,7 @@
 		69205B5A28BA20FC00AC24D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69205B5928BA20FC00AC24D1 /* Assets.xcassets */; };
 		69205B5D28BA20FC00AC24D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69205B5B28BA20FC00AC24D1 /* LaunchScreen.storyboard */; };
 		69205B6528BA21AE00AC24D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69205B6428BA21AE00AC24D1 /* LoginViewController.swift */; };
+		69205B6728BA28E300AC24D1 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69205B6628BA28E300AC24D1 /* EnterEmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		69205B5C28BA20FC00AC24D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69205B5E28BA20FC00AC24D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69205B6428BA21AE00AC24D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		69205B6628BA28E300AC24D1 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				69205B5B28BA20FC00AC24D1 /* LaunchScreen.storyboard */,
 				69205B5E28BA20FC00AC24D1 /* Info.plist */,
 				69205B6428BA21AE00AC24D1 /* LoginViewController.swift */,
+				69205B6628BA28E300AC24D1 /* EnterEmailViewController.swift */,
 			);
 			path = SpotifiyLoginSampleApp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				69205B6528BA21AE00AC24D1 /* LoginViewController.swift in Sources */,
 				69205B5128BA20F700AC24D1 /* AppDelegate.swift in Sources */,
+				69205B6728BA28E300AC24D1 /* EnterEmailViewController.swift in Sources */,
 				69205B5328BA20F700AC24D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
