@@ -89,7 +89,6 @@
 				45A15BD0DA5A5DE6AEF2A8D6 /* Pods-SpotifiyLoginSampleApp.debug.xcconfig */,
 				581E74CB267DA3AF3CF1023F /* Pods-SpotifiyLoginSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
