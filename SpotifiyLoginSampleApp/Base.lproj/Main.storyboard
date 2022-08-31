@@ -223,7 +223,7 @@
         <!--Main View Controller-->
         <scene sceneID="C0W-Ti-eJf">
             <objects>
-                <viewController id="q4f-b5-1R4" customClass="MainViewController" customModule="SpotifiyLoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="q4f-b5-1R4" customClass="MainViewController" customModule="SpotifiyLoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KcG-Wo-YnO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
