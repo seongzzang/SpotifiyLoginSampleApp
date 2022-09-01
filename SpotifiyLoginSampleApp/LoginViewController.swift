@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import GoogleSignIn
 
 class LoginViewController: UIViewController {
@@ -33,11 +34,33 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         
         //google sign in
-        GIDSignIn.sharedInstance().presentingViewController = self
+        //GIDSignIn.sharedInstance.presentingViewController = self
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
-        GIDSignIn.sharedInstance().signIn()
+        guard let clientID = FirebaseApp.app()?.options.clientID else {return}
+        let config = GIDConfiguration(clientID: clientID)
+        
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self){ [unowned self] user, error in
+            if let error = error {
+                print("ERROR Goolge Sign In \(error.localizedDescription)")
+                return
+            }
+
+            guard let authentication = user?.authentication,
+                  let idToken = authentication.idToken
+            else {return}
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+            
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let error = error {
+                    print("ERROR Goolge Sign In \(error.localizedDescription)")
+                    return
+                }
+            }
+        }
+        
     }
     
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
