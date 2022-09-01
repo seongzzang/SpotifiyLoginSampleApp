@@ -58,9 +58,17 @@ class LoginViewController: UIViewController {
                     print("ERROR Goolge Sign In \(error.localizedDescription)")
                     return
                 }
+                self.showMainViewController()
             }
         }
         
+    }
+    
+    private func showMainViewController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
     }
     
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
